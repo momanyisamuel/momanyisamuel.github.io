@@ -134,3 +134,43 @@ button:not(.btn-copy)
   
 img
   width: 100%
+
+input 
+  font: $font-size-body $type-default
+  box-sizing: border-box
+  display: block
+  border: 2px solid $blue
+  padding: 20px
+  width: 100%
+  margin-bottom: 20px
+  font-size: 18px
+  outline: none
+  transition: all 0.2s ease-in-out
+  
+  &::placeholder 
+    transition: all 0.2s ease-in-out
+    color: $blue-bright
+    font: 18px Helvetica, Arial, sans-serif
+  
+  
+  &:focus, &.populated 
+    padding-top: 28px
+    padding-bottom: 12px
+    
+    &::placeholder 
+      color: transparent
+    & + span 
+      opacity: 1
+      top: 10px
+.form-group
+  position: relative
+  display: block 
+  span 
+      color: $blue
+      font: 13px Helvetica, Arial, sans-serif
+      position: absolute
+      top: 0px
+      left: 20px
+      opacity: 0
+      transition: all 0.2s ease-in-out    
+  

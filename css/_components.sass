@@ -1,5 +1,7 @@
 .footer-contacts
-    width: 160px
+    padding: 10px 40px
+    border: 2px solid white
+    margin-bottom: 10px
 footer
     margin-top: 123px
     margin-bottom: 0
@@ -8,7 +10,13 @@ footer
     background-color: $blue
     color: $white
 .line::after
-    content: "\2014"
+    content: url(../img/dash.svg)
+    color: inherit
+
+.line-blue::after
+    content: url(../img/dash-blue.svg)
+    color: inherit
+
 .header nav
     display: flex
     justify-content: space-between
@@ -63,8 +71,8 @@ footer
     background-color: $blue-dark
     
 .separate-up-services
-    -webkit-transform: translate(-2.88889rem, -2.88889rem)
-    transform: translate(-2.88889rem, -2.88889rem)   
+    -webkit-transform: translate(-.88889rem,-.88889rem)
+    transform: translate(-1.88889rem,-.88889rem) 
 
 .hero-slider
     position: relative
@@ -74,12 +82,16 @@ footer
     bottom: 80px
     left: 30.8px
     color: $white
+    @include max-width($screen-sm)
+        bottom: 40px
 .call-to-action
     display: flex
 .navigation
     margin: 0
     width: 100%
     padding: 0
+    &:hover
+        cursor: pointer
 .navigation li
     display: block
     text-align: center
@@ -90,6 +102,8 @@ footer
     margin: 0
 .navigation a
     font-weight: bold
+    width: 100%
+    padding: 0 20px
 
 .toggle-menu 
   display: block
