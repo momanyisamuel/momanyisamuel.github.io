@@ -1,0 +1,130 @@
+// ---------------------------------------------------------
+// PAGE LAYOUTS & GRIDS
+// ---------------------------------------------------------
+
+// Content wrappers
+// ---------------------------------------------------------
+.wrapper 
+  max-width: 940px
+  margin: 0 auto
+  
+  @include max-width($screen-med)
+    margin-left: 20px
+    margin-right: 20px
+  
+
+.wrapper-sm 
+  max-width: 620px
+  margin: 0 auto
+
+p.wrapper-sm + p.wrapper-sm 
+  margin-top: 20px
+
+.wrapper-lg 
+  max-width: 1240px
+  margin: 0 auto
+  
+  @include max-width($screen-lg)
+    margin-left: 20px
+    margin-right: 20px
+  
+
+
+// Columns
+// ---------------------------------------------------------
+.grid-wrapper 
+  display: flex
+  justify-content: center
+  flex-wrap: wrap
+.grid-wrapper.content-justified
+  justify-content: flex-start
+
+// Use together to create a narrow and wide 2 column group
+.grid-narrow 
+  @include min-width($screen-sm)
+    width: 32%
+    margin-right: 2%
+  
+
+.grid-wide 
+  position: relative
+  
+  @include min-width($screen-sm)
+    width: 66%
+  
+
+// goes from 2 columns to 1
+.grid-2-1 
+  margin-bottom: 20px
+  
+  @include min-width($screen-sm)
+    width: 49%
+    
+    &:nth-of-type(2) 
+      margin-left: 2%
+  @include max-width($screen-med)
+    width: 100%
+    
+
+// goes from 3 columns to 1
+.grid-3-1 
+  margin-bottom: 20px
+  
+  @include min-width($screen-sm)
+    width: 32%
+    
+    &:nth-of-type(3n+2) 
+      margin-left: 2%
+      margin-right: 2%
+    
+  
+
+// goes from 4 columns to 2 to 1
+.grid-4-2-1 
+  margin-bottom: 20px
+  
+  @include min-width($screen-med)
+    width: 23.875%
+    margin-left: 1.5%
+    
+    &:nth-of-type(4n+1) 
+      margin-left: 0
+    
+  
+  @include min-max($screen-sm, $screen-med)
+    width: 32%
+    
+    &:nth-of-type(3n+2) 
+      margin-left: 2%
+      margin-right: 2%
+    
+  
+
+
+// Module / component container
+// ---------------------------------------------------------
+.border 
+  background: white
+  
+  @include min-width($screen-xsm)
+    margin: 0 20px
+    padding: 10px 20px
+    
+    &:first-child 
+      padding-top: 20px
+    
+  
+  @include max-width($screen-xsm)
+    margin: 0 12px
+    padding: 12px
+  
+
+
+.no-border 
+  color: white
+  
+  @include max-width($screen-med) 
+    padding-right: 20px
+    padding-left: 20px
+    margin: 0 20px
+  

@@ -1,0 +1,188 @@
+.footer-contacts
+    width: 160px
+footer
+    margin-top: 123px
+    margin-bottom: 0
+    padding-top: 123px
+    padding-bottom: 40px
+    background-color: $blue
+    color: $white
+.line::after
+    content: "\2014"
+.header nav
+    display: flex
+    justify-content: space-between
+    flex-direction: row
+.navbar
+    position: relative
+    min-height: 50px
+    //margin-bottom: 25px
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2)
+    background-color: rgba(255,255,255,0.95)
+
+.logo-header 
+    background: url(../img/serianu-logo.png) center center no-repeat
+    display: inline-block
+    width: 215px
+    height: 60px
+    background-size: contain
+    margin-left: 0
+
+.menu ul 
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    list-style: none
+
+    @include max-width($screen-med)
+        display: none
+
+.menu ul li 
+    margin-left: 15px
+
+.menu ul li a 
+    text-decoration: none
+    font-weight: bold
+.separate-down, .separate-up 
+    will-change: transform
+    -webkit-transform: translate(0)
+    transform: translate(0)
+
+.separate-down 
+    -webkit-transform: translate(.44444rem,.44444rem)
+    transform: translate(.44444rem,.44444rem)
+    background-color: $blue-dark
+    
+.separate-up
+    -webkit-transform: translate(-.88889rem,-.88889rem)
+    transform: translate(-1.88889rem,-.88889rem)
+
+.separate-down-services 
+    -webkit-transform: translate(.44444rem,.44444rem)
+    transform: translate(.44444rem,.44444rem)
+    background-color: $blue-dark
+    
+.separate-up-services
+    -webkit-transform: translate(-2.88889rem, -2.88889rem)
+    transform: translate(-2.88889rem, -2.88889rem)   
+
+.hero-slider
+    position: relative
+
+.hero-text
+    position: absolute
+    bottom: 80px
+    left: 30.8px
+    color: $white
+.call-to-action
+    display: flex
+.navigation
+    margin: 0
+    width: 100%
+    padding: 0
+.navigation li
+    display: block
+    text-align: center
+    text-decoration: none
+    list-style: none
+    border-bottom:  1px solid $gray-light
+    padding: 20px 20px
+    margin: 0
+.navigation a
+    font-weight: bold
+
+.toggle-menu 
+  display: block
+  width: 28px
+  height: 28px
+  display: none
+
+  @include max-width($screen-med)
+    display: flex
+    justify-content: center
+    margin-top: 20px
+
+  span:after, span:before 
+    content: ""
+    position: absolute
+    left: 0
+    top: 9px
+
+  span:after
+    top: 18px
+
+  span 
+    position: relative
+    display: block
+
+  span, span:after, span:before
+    width: 100%
+    height: 2px
+    background-color: $blue
+    transition: all 0.3s
+    backface-visibility: hidden
+    border-radius: 2px
+
+
+  &.on span 
+    background-color: transparent
+
+  &.on span:before 
+    transform: rotate(45deg) translate(-1px, 0px)
+
+  &.on span:after 
+    transform: rotate(-45deg) translate(6px, -7px)
+
+.hero-text h4
+    margin-bottom: 16.7px
+
+.hero-text h2
+    margin-bottom: 60px
+.hero-text a.btn-copy
+    color: $white
+    border: 2px solid $white
+    font-weight: bold
+    -webkit-font-smoothing: antialiased
+
+
+.service--one img 
+    height: 80px
+    width: 80px
+    margin-bottom: 30px
+    margin-left: 0
+
+.services
+    margin-top: 120px
+
+.listed-services
+    margin-top: 80px
+.section--hero
+    background-image: url('../img/bg-one.png')
+    background-size: cover
+    background-position: 50% 50%
+    width: 100%
+    min-height: 300px
+.section--intro 
+    background-color: $blue
+    //background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' id='Layer_1' style='enable-background:new 0 0 292.1 292.6;' viewBox='0 0 292.1 292.6' x='0px' y='0px' xmlns:xml='http://www.w3.org/XML/1998/namespace' xml:space='preserve' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1'%3E%3Cstyle type='text/css'%3E .st0%7Bfill:%23FFFFFF;%7D%0A%3C/style%3E%3Crect class='st0' width='120' height='295' /%3E%3C/svg%3E") $blue no-repeat 0 0/auto 100.5%
+    color: $white
+    padding: 60px 0
+.services-home
+    min-height: 562px
+    width: 100%
+    padding-top: 80px
+    background-color: $gray-light
+.hide
+    display: none
+.show
+    display: block
+
+
+.desc-color
+    background-color: $blue
+    color: $white
+.desc-img
+    background-image: url(../img/bg-services-two.png)
+    background-position: 50% 50%
+    background-repeat: no-repeat
+    min-height: 562px

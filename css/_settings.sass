@@ -1,0 +1,177 @@
+// Variables
+
+// colours
+
+$coral:       #ff5e69
+$purple:      #b385dd
+$yellow:      #eaaf1d
+$green:       #0ab070
+$blue:        #2C4382
+$blue-bright: #1D1F7A
+$blue-dark:   #384569
+$black:       #10161a
+$gray-light:  #B4B8C7
+$gray-med:    #808080
+$white:       #FFFFFF
+
+// Typography
+
+$type-default: 'Archivo', helvetica, sans-serif
+$type-normal: normal
+$type-bold:   bold
+$type-light:  300
+
+// Using the 62.5% method to calculate rem
+//http://snook.ca/archives/html_and_css/font-size-with-rem
+
+$font-size-heading-lg:   5.6rem
+$font-size-heading-md:   4.8rem
+$font-size-heading:      3.2rem
+$font-size-pullquote:    2.9rem // lh 42px = 1.45
+$font-size-intro:        2.2rem // lh 34px = 1.54
+$font-size-questions:    2.0rem // lh 28px = 1.4
+$font-size-body:         1.8rem // lh 30px = 1.66
+$font-size-sm:           1.6rem
+$font-size-xsm:          1.4rem
+
+$font-lh-h1:     6.1rem
+$font-lh-h2:     4.2rem
+$font-lh-h3:     3.1rem
+$font-lh-h4:     2.4rem
+$font-lh-p:      2.4rem
+
+
+
+// helper classes
+
+.screen-readers 
+  position: absolute !important
+  height: 1px 
+  width: 1px 
+  overflow: hidden
+  clip: rect(1px 1px 1px 1px) // IE6, IE7 
+  clip: rect(1px, 1px, 1px, 1px)
+
+.spacer30 
+  padding-top: 30px
+  padding-bottom: 30px
+  margin-top: 0
+  margin-bottom: 0
+
+.spacer30-bottom 
+  padding-bottom: 30px
+  margin-bottom: 0
+
+.spacer15-bottom 
+  padding-bottom: 15px
+  margin-bottom: 0
+
+.spacer30-top 
+  padding-top: 30px
+  margin-top: 0
+
+.nowrap 
+  white-space: nowrap
+
+.italic 
+  font-style: italic
+
+.bold 
+  font-weight: bold
+
+.type-xsm 
+  font-size: $font-size-xsm
+
+
+// media queries
+
+$screen-xsm: 400px
+$screen-sm: 660px
+$screen-med: 980px
+$screen-lg: 1280px
+$screen-custom-one: 1178px
+
+@mixin max-width($max) 
+  @media only screen and (max-width: $max)  
+    @content 
+
+@mixin min-width($min) 
+  @media only screen and (min-width: $min + 1)  
+    @content 
+
+@mixin min-max($min, $max)
+  @media only screen and (min-width: $min + 1) and (max-width: $max)  
+    @content 
+
+// ---------------------------------------------------------
+// MIXINS
+// ---------------------------------------------------------
+
+// Clearfix for floated elements
+@mixin clearfix 
+  &:after 
+    content: ""
+    display: table
+    clear: both
+
+
+// For retina displays
+@mixin retina 
+  @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi) 
+    @content
+ 
+
+
+// LINKS
+// ---------------------------------------------------------
+// same color as the theme
+@mixin theme-links($color) 
+  background: none
+  text-shadow: none
+  color: $color
+  
+  &:hover 
+    color: $black
+
+// hover is the same color as the theme
+@mixin theme-links-inverse($color) 
+  background: none
+  text-shadow: none
+  
+  &:hover 
+    color: $color
+
+// custom underline style
+@mixin underline-shadow($line-color, $shadow-color, $hover-color) 
+  // adds underline
+  background: linear-gradient(to top, $line-color 0, $line-color 100%) repeat-x 0 90% / 1px 1px
+  // adds bg on letters to go over the line
+  text-shadow: 2px 0 $shadow-color, 1px 0 $shadow-color, -1px 0 $shadow-color, -2px 0 $shadow-color
+  
+  &:hover 
+    color: $hover-color
+    background: none
+    text-shadow: none
+
+
+
+// LISTS
+// ---------------------------------------------------------
+// Removes default styles
+@mixin list-reset 
+  margin-top: 0
+  margin-bottom: 0
+  padding: 0
+  list-style-type: none
+
+// Removes default styles and displays horrizontal
+@mixin list-reset-inline 
+  margin-top: 0
+  margin-bottom: 0
+  padding: 0
+  list-style-type: none
+  
+  li 
+    display: inline-block
+
+

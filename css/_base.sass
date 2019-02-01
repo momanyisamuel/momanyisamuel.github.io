@@ -1,0 +1,136 @@
+//--------------------------
+// BASE STYLES
+//--------------------------
+//site-wide styles
+
+html 
+  box-sizing: border-box
+  font-size: 62.5%
+  
+  @include max-width($screen-xsm)
+    font-size: 60%
+  
+*, *:before, *:after 
+  box-sizing: inherit
+
+// * 
+//   border: 1px solid black
+// 
+ 
+body 
+  padding: 0
+  margin: 0
+  font-family: $type-default
+  font-weight: 400 
+  font-style: normal
+  font-size: $font-size-body
+  line-height: 1.66
+  color: $blue
+
+//Typography
+
+h1
+  font-size: $font-size-heading-lg
+  line-height: $font-lh-h1
+  margin:0
+  @include max-width($screen-custom-one)
+    font-size: 4.8rem
+  @include max-width($screen-med)
+    font-size: 3.2rem
+    line-height: $font-lh-h2
+h2
+  font-size: $font-size-heading
+  line-height: $font-lh-h2
+  margin:0
+  @include max-width($screen-med)
+    font-size: 3.2rem
+    line-height: $font-lh-h4
+    margin-bottom: 40px
+h2.large
+  font-size: $font-size-heading-md
+  line-height: $font-lh-h1
+
+h3
+  font-size: $font-size-intro
+  line-height: $font-lh-h3
+  margin:0
+h4
+  font-size: $font-size-xsm
+  line-height: 2.0rem
+  margin:0
+p
+  font-size: $font-size-xsm
+  line-height: $font-lh-p
+  margin: 0
+
+p + h2,
+p + h3 
+  margin-top: 30px
+
+a 
+  color: inherit
+  text-decoration: none
+  font-size: $font-size-xsm
+  line-height: $font-lh-p
+  margin: 0
+
+dl 
+  margin: 0
+
+i, em 
+  font-style: italic
+
+strong, b 
+  font-weight: $type-bold
+
+
+
+// Fade in content - also uses JS in global.js
+// ---------------------------------------------------------
+
+.hidden 
+  opacity: 0
+
+.visible 
+  opacity: 1
+
+
+.fade-in 
+  animation-duration: 0.2s
+  animation-fill-mode: both
+  animation-name: fade-in
+
+@keyframes fade-in 
+  from 
+    opacity: 0
+  to 
+    opacity: 1
+  
+// buttons
+
+button:not(.btn-copy) 
+  border: 0
+  border-radius: 2px
+  padding: 15px 20px
+  cursor: pointer
+  color: white
+  font-size: $font-size-sm
+  margin-bottom: 4px
+
+.btn-copy 
+  border: 2px solid $blue
+  cursor: pointer
+  padding: 15px 20px
+  background: transparent
+  color: $blue
+  text-transform: uppercase
+  transition-property: color,border-color,background-color,opacity
+  transition-duration: 300ms,300ms,300ms,300ms
+
+  &:focus,&:active,&:hover 
+    outline: none
+    border: 2px solid $black
+    color: $black
+  
+img
+  width: 100%

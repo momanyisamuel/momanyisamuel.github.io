@@ -1,0 +1,82 @@
+// ---------------------------------------------------------
+// THEME STYLES
+// ---------------------------------------------------------
+// The class (prepended with "theme-") needs to be added 
+// to the <body> element for the theme styles to work. 
+// Added and customized using PHP variables on each page.
+
+// $theme = class name
+// $color = color variable listed in settings.scss
+// http://sass-lang.com/documentation/file.SASS_REFERENCE.html#each-directive
+@each $theme, $color in ('coral', $coral),
+                        ('purple', $purple),
+                        ('yellow', $yellow),
+                        ('green', $green),
+                        ('blue', $blue) {
+
+  .theme-#{$theme} {
+    background-color: $color;
+    
+    // White underline on theme colored background, black on hover
+    .no-border a {
+      @include underline-shadow(#fff, $color, $black);
+    }
+    // Black underline on white background
+    .border a {
+      @include underline-shadow($black, #fff, $color);
+    }
+    // No underline
+    .no-underline a,
+    a.no-underline {
+      @include underline-shadow(transparent, transparent, transparent);
+      
+      &:hover {
+        color: $black;
+      }
+    }
+    
+    // Interview links
+    .author a {
+      @include theme-links-inverse($color);
+    }
+    .credits a {
+      @include theme-links($color);
+    }
+    
+    // Global footer
+    input[type="submit"]{
+      color: $color;
+      
+      &:hover {
+        color: $black;
+      }
+    }
+    .footer-links a {
+      @include theme-links-inverse($color);
+    }
+    
+    // Helper class - add to any element for one off styles
+    .theme-color {
+      color: $color;
+    }
+    
+    // Style guide page
+    &.style-guide > header {
+      background: $color;
+    }
+    .module-info {
+      border-top: 20px solid $color;
+    }
+  }
+  
+  // Style guide page
+  button.#{$theme} {
+    background: $color;
+    
+    &:focus {
+      outline: 1px solid darken($color, 10%);
+    }
+  }
+  
+  
+} 
