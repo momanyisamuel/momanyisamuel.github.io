@@ -463,8 +463,8 @@ footer {
 }
 
 .separate-up {
-  -webkit-transform: translate(-0.88889rem, -0.88889rem);
-  transform: translate(-1.88889rem, -0.88889rem);
+  -webkit-transform: translate(-1.88889rem, -1.88889rem);
+  transform: translate(-1.88889rem, -1.88889rem);
 }
 
 .separate-down-services {
@@ -636,6 +636,10 @@ footer {
   background-position: 50% 50%;
   background-repeat: no-repeat;
   min-height: 562px;
+}
+
+.cyber-reports {
+  margin: 0;
 }
 
 .theme-coral {

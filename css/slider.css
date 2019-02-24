@@ -1,0 +1,21 @@
+.bx-wrapper {
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border: 0;
+  }
+
+.bx-wrapper .bx-controls-direction a {
+    top: 40%;
+}  
+
+.bx-wrapper .bx-pager, .bx-wrapper .bx-controls-auto {
+    bottom: -40px;
+}
+
+.bx-wrapper .bx-prev {
+    background: url(../img/controls.png) no-repeat 0 -32px;
+}
+.bx-wrapper .bx-next {
+    background: url(../img/controls.png) no-repeat -43px -32px;
+}
