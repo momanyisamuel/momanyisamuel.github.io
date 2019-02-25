@@ -62,7 +62,7 @@ html {
 body {
   padding: 0;
   margin: 0;
-  font-family: "Archivo", helvetica, sans-serif;
+  font-family: "Source Sans Pro", helvetica, sans-serif;
   font-weight: 400;
   font-style: normal;
   font-size: 1.8rem;
@@ -148,6 +148,15 @@ strong, b {
   font-weight: bold;
 }
 
+ul {
+  padding: 0;
+}
+
+li {
+  text-anchor: none;
+  list-style: none;
+}
+
 .hidden {
   opacity: 0;
 }
@@ -201,7 +210,7 @@ img {
 }
 
 input {
-  font: 1.8rem "Archivo", helvetica, sans-serif;
+  font: 1.8rem "Source Sans Pro", helvetica, sans-serif;
   box-sizing: border-box;
   display: block;
   border: 2px solid #2C4382;
@@ -614,7 +623,7 @@ footer {
 .services-home {
   min-height: 562px;
   width: 100%;
-  padding-top: 80px;
+  padding-top: 60px;
   background-color: #B4B8C7;
 }
 
@@ -640,6 +649,20 @@ footer {
 
 .cyber-reports {
   margin: 0;
+}
+
+.cyber-reports a {
+  color: #1D1F7A;
+}
+
+.cyber-reports a:hover::after {
+  content: "DOWNLOAD";
+  padding-left: 5px;
+  color: #ff5e69;
+}
+
+.fa-angle-right {
+  padding-left: 10px;
 }
 
 .theme-coral {
