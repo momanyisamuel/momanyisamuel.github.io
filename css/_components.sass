@@ -211,3 +211,39 @@ footer
 .fa-angle-right
     padding-left: 10px
 
+.cveq-breakdown
+    padding: 20px 10px
+    text-align: left
+    width: 200px
+    position: relative
+    margin-left: 20px
+    .cveq-breakdown--icon 
+        width: 90px
+        height: 90px
+        margin-bottom: 15px
+    .cveq-breakdown--title 
+        background-color: #2c4382
+        color: #fff
+        padding: 20px
+        font-weight: bold
+        position: relative
+        &:after
+            left: 100%
+            top: 50%
+            border: solid transparent
+            content: " "
+            height: 0
+            width: 0
+            position: absolute
+            pointer-events: none
+            border-color: rgba(136, 183, 213, 0)
+            border-left-color: $blue
+            border-width: 30px
+            margin-top: -30px
+    .cveq-breakdown--list
+        padding: 0 20px
+        li
+            font-size: $font-size-xsm
+        .cveq-breakdown--list-title
+            font-weight: bold
+        .cveq-breakdown--list-item
